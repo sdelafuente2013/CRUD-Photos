@@ -9,9 +9,4 @@
   </div>
 <% end %>
 
-<%= simple_form_for @photo do |f| %>
-  <%= f.input :title %>
-  <%= f.input :picture %>
-
-  <%= f.button :submit, class: "btn btn-primary"%>
-<% end %>
+<%= link_to 'New Photo', new_photo_path %>

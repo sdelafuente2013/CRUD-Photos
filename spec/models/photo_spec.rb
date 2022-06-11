@@ -6,11 +6,6 @@ RSpec.describe Photo, 'create' do
     expect(photo.save).to be(false)
   end
 
-  # it "El titulo no puede estar vacio" do
-  #   photo = Photo.new(title: ' ')
-  #   expect(photo.save).to be(false)
-  # end
-
   it "Deberia ser una instancia de Photo" do
       photo = Photo.new()
       expect(photo).to be_an_instance_of Photo

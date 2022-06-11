@@ -5,9 +5,18 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.create(photo_params)
+    @photo = Photo.new(photo_params)
+    @photo.save
 
-    redirect_to photos_path
+    if @photo.save
+      redirect_to photos_path, notice: "Photo was successfully created."
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def new
+    @photo = Photo.new
   end
 
   def destroy
