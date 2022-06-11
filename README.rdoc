@@ -9,9 +9,8 @@ PostgreSQL version. 12.11
 The steps for setup are listed below:
 
 1) Clone the repository git clone
-```bash
-git clone https://github.com/sdelafuente2013/CRUD-Photos
-```
+
+ $ git clone https://github.com/sdelafuente2013/CRUD-Photos
 
 2) Install and update the necessary gems
 ```
