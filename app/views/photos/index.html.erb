@@ -1,21 +1,17 @@
 <h1>Lista de imagenes</h1>
-<div class="card" style="width: 22rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <a href="#" class="btn btn-primary">Eliminar</a>
-    <a href="#" class="btn btn-primary">Editar</a>
-  </div>
-</div>
 
-<div class="card" style="width: 22rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <a href="#" class="btn btn-primary">Eliminar</a>
-    <a href="#" class="btn btn-primary">Editar</a>
+<% @photos.each do |photo|%>
+  <div class="card" style="width: 18rem;">
+    <h5 class="card-title"><%=photo.title%></h5>
+    <img class="card-img-top" src="<%=photo.picture.medium.url%>" alt="Card image cap">
+<!--    <div class="card-body">-->
+<!--      <button class="btn btn-primary">Eliminar</button>-->
+      <%= button_to 'Eliminar', photo, method: :delete, class: "btn btn-primary"%>
+      <%= button_to 'Editar', photo, method: :put, class: "btn btn-primary"%>
+<!--    </div>-->
   </div>
-</div>
+<% end %>
+<%#=photo.picture.thumb.url%>
 
 <%= simple_form_for @photo do |f| %>
   <%= f.input :title %>
