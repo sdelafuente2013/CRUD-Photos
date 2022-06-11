@@ -57,3 +57,6 @@ https://s8.gifyu.com/images/ezgif.com-gif-maker6ae23641ff09bc6b.gif
 
 == Deployment
 
+Heroku
+
+     https://app-crud-photos.herokuapp.com/
