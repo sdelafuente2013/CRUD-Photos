@@ -18,7 +18,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    //border: 1px solid black;
     .card {
       display: flex;
       flex-direction: column;
@@ -27,7 +26,7 @@ body {
 
       padding: 5px;
       border: blue dotted 1px;
-      width: 25%;
+      //width: 25%;
       height: 400px;
       margin: 1em;
 
@@ -47,5 +46,15 @@ body {
   h6{
     position: absolute;
     top: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  .list-photos{
+    flex-direction: column;
+    align-items: center;
+    .card {
+      width: 250px;
+   }
   }
 }
