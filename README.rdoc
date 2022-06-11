@@ -2,10 +2,10 @@
 
 == Requirement
 
-     ##
-     # ➜ Ruby version. 2.6.9
-     # ➜ Ruby on Rails version. 6.1.6
-     # ➜ PostgreSQL version. 12.11
+     
+     # Ruby version. 2.6.9
+     # Ruby on Rails version. 6.1.6
+     # PostgreSQL version. 12.11
 
 == Setting up
 
@@ -14,18 +14,22 @@ The steps for setup are listed below:
 1) Clone the repository git clone
 
     $ git clone https://github.com/sdelafuente2013/CRUD-Photos
+    
 
 2) Install and update the necessary gems
 
     $ bundle install
+    
 
 2) Create the DB
 
     $ rails db:create
+    
 
 3) Apply the migrations
 
     $ rails db:migrate
+    
 
 4) Run the server and it will run on port 3000
 
@@ -34,15 +38,15 @@ The steps for setup are listed below:
 
 == Basic usage
 
-   $   | Verb       |          Path        |    Action    |    Used for
+   |      Verb     |        Path          |    Action    |    Used for
 
-   $ GET            |   /photos            | index        | displaying list of all photos
-   $ GET            |   /photos/new        | new          | displaying an HTML form to create a new photo
-   $ POST           |   /photos            | create       | creating a new photo in the database
-   $ GET            |   /photos/:id        | show         | displaying a specific photo
-   $ GET            |   /photos/:id/edit   | edit         | displaying an HTML form to edit a specific photo
-   $ PUT or PATCH   |   /photos/:id        | update       | updating a specific photo in the database
-   $ DELETE         |   /photos/:id        | destroy      | deleting a specific photo in the database
+    GET            |   /photos            | index        | displaying list of all photos
+    GET            |   /photos/new        | new          | displaying an HTML form to create a new photo
+    POST           |   /photos            | create       | creating a new photo in the database
+    GET            |   /photos/:id        | show         | displaying a specific photo
+    GET            |   /photos/:id/edit   | edit         | displaying an HTML form to edit a specific photo
+    PUT or PATCH   |   /photos/:id        | update       | updating a specific photo in the database
+    DELETE         |   /photos/:id        | destroy      | deleting a specific photo in the database
 
 
 == Screenshot
