@@ -1,10 +1,12 @@
-<h1>Editar foto <%=@photo.title%></h1>
+<navbar>
+  <div></div>
+  <h2>Editar foto <%= @photo.title %>:</h2>
+  <%= link_to 'Volver al listado', photos_path, class: "btn btn-primary" %>
+</navbar>
 
 <%= simple_form_for @photo do |f| %>
-  <%= f.input :title, hint: 'No special characters.' %>
-  <%= f.input :picture %>
-
-  <%= f.button :submit, class: "btn btn-primary"%>
-  <%= link_to 'Volver', photos_path, class: "btn btn-primary" %>
+  <%= f.input :title, label: 'Titulo:', error: 'No puede estar en blanco el titulo' %>
+  <%= f.input :picture, label: 'Elegir imagen:' %>
+  <%= f.button :submit, 'Actualizar', class: "btn btn-success" %>
 <% end %>
 

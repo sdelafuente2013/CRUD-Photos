@@ -7,8 +7,8 @@ RSpec.describe Photo, 'create' do
   end
 
   it "Deberia ser una instancia de Photo" do
-      photo = Photo.new()
-      expect(photo).to be_an_instance_of Photo
+    photo = Photo.new()
+    expect(photo).to be_an_instance_of Photo
   end
 
   it 'Deberia dejarme añadir una photo que contenga un titulo' do

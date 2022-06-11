@@ -1,5 +1,11 @@
+<navbar>
+  <div></div>
+  <h2>Agregar nueva imagen:</h2>
+  <%= link_to 'Volver al listado', photos_path, class: "btn btn-primary" %>
+</navbar>
+
 <%= simple_form_for @photo do |f| %>
-  <%= f.input :title%>
-  <%= f.input :picture %>
-  <%= f.button :submit, class: "btn btn-primary"%>
+  <%= f.input :title, label: 'Titulo:', error: 'No puede estar en blanco el titulo' %>
+  <%= f.input :picture, label: 'Elegir imagen:' %>
+  <%= f.button :submit, 'Crear', class: "btn btn-success" %>
 <% end %>

@@ -1,12 +1,20 @@
-<h1>Lista de imagenes</h1>
+<navbar>
+  <div></div>
+  <h2>Lista de imágenes</h2>
+  <%= link_to 'Agregar imagen', new_photo_path, class: "btn btn-success" %>
+</navbar>
 
-<% @photos.each do |photo|%>
-  <div class="card" style="width: 18rem;">
-    <h5 class="card-title"><%=photo.title%></h5>
-    <img class="card-img-top" src="<%=photo.picture.medium.url%>" alt="Card image cap">
-    <%= button_to 'Eliminar', photo, method: :delete, class: "btn btn-primary"%>
-    <%= button_to 'Editar', photo, method: :get, class: "btn btn-primary"%>
-  </div>
-<% end %>
+<div class="list-photos">
+  <% @photos.each do |photo| %>
+    <div class="card">
+      <h5 class="card-title"><%= photo.title %></h5>
+      <img src="<%= photo.picture.medium.url %>" alt="Card image cap">
+      <div class="actions">
+        <%= button_to 'Eliminar', photo, method: :delete, class: "btn btn-danger" %>
+        <%= button_to 'Editar', photo, method: :get, class: "btn btn-warning" %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<%= link_to 'New Photo', new_photo_path %>
+
