@@ -34,3 +34,10 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+/.idea/.gitignore
+/.idea/factorialf52.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/db/schema.rb
+/package-lock.json
