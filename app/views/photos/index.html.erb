@@ -4,14 +4,10 @@
   <div class="card" style="width: 18rem;">
     <h5 class="card-title"><%=photo.title%></h5>
     <img class="card-img-top" src="<%=photo.picture.medium.url%>" alt="Card image cap">
-<!--    <div class="card-body">-->
-<!--      <button class="btn btn-primary">Eliminar</button>-->
       <%= button_to 'Eliminar', photo, method: :delete, class: "btn btn-primary"%>
       <%= button_to 'Editar', photo, method: :put, class: "btn btn-primary"%>
-<!--    </div>-->
   </div>
 <% end %>
-<%#=photo.picture.thumb.url%>
 
 <%= simple_form_for @photo do |f| %>
   <%= f.input :title %>
