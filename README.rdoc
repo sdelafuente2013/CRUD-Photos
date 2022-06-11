@@ -2,9 +2,10 @@
 
 == Requirement
 
-Ruby version. 2.6.9
-Ruby on Rails version. 6.1.6
-PostgreSQL version. 12.11
+     ##
+     # ➜ Ruby version. 2.6.9
+     # ➜ Ruby on Rails version. 6.1.6
+     # ➜ PostgreSQL version. 12.11
 
 == Setting up
 
