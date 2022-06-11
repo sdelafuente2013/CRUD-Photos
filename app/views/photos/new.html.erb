@@ -5,7 +5,7 @@
 </navbar>
 
 <%= simple_form_for @photo do |f| %>
-  <%= f.input :title, label: 'Titulo:', error: 'No puede estar en blanco el titulo' %>
+  <%= f.input :title, label: 'Titulo:', error: 'El titulo no puede estar en blanco o repetirse' %>
   <%= f.input :picture, label: 'Elegir imagen:' %>
   <%= f.button :submit, 'Crear', class: "btn btn-success" %>
 <% end %>

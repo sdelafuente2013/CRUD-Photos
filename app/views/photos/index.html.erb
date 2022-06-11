@@ -4,17 +4,22 @@
   <%= link_to 'Agregar imagen', new_photo_path, class: "btn btn-success" %>
 </navbar>
 
-<div class="list-photos">
-  <% @photos.each do |photo| %>
-    <div class="card">
-      <h5 class="card-title"><%= photo.title %></h5>
-      <img src="<%= photo.picture.medium.url %>" alt="Card image cap">
-      <div class="actions">
-        <%= button_to 'Eliminar', photo, method: :delete, class: "btn btn-danger" %>
-        <%= button_to 'Editar', photo, method: :get, class: "btn btn-warning" %>
+
+<% if @photos.size == 0 %>
+  <h6><em>No hay imagenes para mostrar...</em></h6>
+<% else %>
+  <div class="list-photos">
+    <% @photos.each do |photo| %>
+      <div class="card">
+        <h5 class="card-title"><%= photo.title %></h5>
+        <img src="<%= photo.picture.medium.url %>" alt="Card image cap">
+        <div class="actions">
+          <%= button_to 'Eliminar', photo, method: :delete, class: "btn btn-danger" %>
+          <%= button_to 'Editar', photo, method: :get, class: "btn btn-warning" %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+<% end %>
 </div>
 
 
