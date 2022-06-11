@@ -1,4 +1,6 @@
-= Requirement
+= CRUD - Photos
+
+== Requirement
 
 Ruby version. 2.6.9
 Ruby on Rails version. 6.1.6
@@ -28,36 +30,26 @@ The steps for setup are listed below:
 
     $ rails start -p 3000
 
-https://s8.gifyu.com/images/javascript.png
 
 == Basic usage
 
-| Verb | Path | Action | Used for |
-| :--- | :--- | :--- | :--- |
-| GET | /photos | index | displaying list of all photos | OK
-| GET | /photos/new | new | displaying an HTML form to create a new photo | ok
-| POST | /photos | create | creating a new photo in the database |
-| GET | /photos/:id | show | displaying a specific photo |
-| GET | /photos/:id/edit | edit | displaying an HTML form to edit a specific photo |
-| PUT or PATCH | /photos/:id | update | updating a specific photo in the database |
-| DELETE | /photos/:id | destroy | deleting a specific photo in the database |
+   $   | Verb       |          Path            |    Action         |              Used for |
+
+   $ GET            |   /photos                 | index         | displaying list of all photos
+   $ GET            |   /photos/new             | new           | displaying an HTML form to create a new photo
+   $ POST           |   /photos                 | create        | creating a new photo in the database
+   $ GET            |   /photos/:id             | show          | displaying a specific photo
+   $ GET            |   /photos/:id/edit        | edit          | displaying an HTML form to edit a specific photo
+   $ PUT or PATCH   |   /photos/:id             | update        | updating a specific photo in the database
+   $ DELETE         |   /photos/:id             | destroy       | deleting a specific photo in the database
 
 
-== Basic usage
+== Screenshot
+https://s8.gifyu.com/images/cap1f0d0003db765ced3.png
+https://s8.gifyu.com/images/cap205bfb2b4e289925f.png
+https://s8.gifyu.com/images/cap3a291c8b3672ce3b1.png
 
 
 
+== Deployment
 
-== Final comment
-
-I adjusted to the required time of the challenger, but I have noticed that this API has many improvement points.
-
-Some of them are:
-
-- Improve and increase the tests through Rspec or another
-
-- Work the future reports generated from ActiveJobs in some way
-
-- Apply some good practices to avoid repeating code
-
-- Comment the code
