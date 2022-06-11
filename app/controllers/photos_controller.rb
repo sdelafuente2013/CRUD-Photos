@@ -1,12 +1,11 @@
 class PhotosController < ApplicationController
   def index
     @photos = Photo.all
-    @photo = Photo.new()
+    @photo = Photo.new
   end
 
   def create
-    @photo = Photo.new(photo_params)
-    @photo.save
+    @photo = Photo.create(photo_params)
 
     redirect_to photos_path
   end
@@ -18,12 +17,18 @@ class PhotosController < ApplicationController
     redirect_to photos_path
   end
 
-  # def update
-  #   @photo = Photo.all.find(params[:id])
-  #
-  #
-  #   redirect_to photos_path
-  # end
+  def show
+    @photo = Photo.all.find(params[:id])
+  end
+
+  def update
+    @photo = Photo.all.find(params[:id])
+    @photo.title = photo_params[:title]
+    @photo.picture = photo_params[:picture]
+    @photo.save
+
+    redirect_to photos_path
+  end
 
   private
 

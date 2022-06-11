@@ -4,8 +4,8 @@
   <div class="card" style="width: 18rem;">
     <h5 class="card-title"><%=photo.title%></h5>
     <img class="card-img-top" src="<%=photo.picture.medium.url%>" alt="Card image cap">
-      <%= button_to 'Eliminar', photo, method: :delete, class: "btn btn-primary"%>
-      <%= button_to 'Editar', photo, method: :put, class: "btn btn-primary"%>
+    <%= button_to 'Eliminar', photo, method: :delete, class: "btn btn-primary"%>
+    <%= button_to 'Editar', photo, method: :get, class: "btn btn-primary"%>
   </div>
 <% end %>
 

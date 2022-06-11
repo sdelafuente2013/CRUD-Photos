@@ -1,0 +1,10 @@
+<h1>Editar foto <%=@photo.title%></h1>
+
+<%= simple_form_for @photo do |f| %>
+  <%= f.input :title %>
+  <%= f.input :picture %>
+
+  <%= f.button :submit, class: "btn btn-primary"%>
+  <%= link_to 'Volver', photos_path, class: "btn btn-primary" %>
+<% end %>
+
