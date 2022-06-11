@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/photos', to: 'photos#index'
+  resources :photos, only: [:create, :index, :show, :update, :destroy]
 end

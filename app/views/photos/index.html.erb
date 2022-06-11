@@ -1,1 +1,25 @@
-<h1>Photos#index</h1>
+<h1>Lista de imagenes</h1>
+<div class="card" style="width: 22rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <a href="#" class="btn btn-primary">Eliminar</a>
+    <a href="#" class="btn btn-primary">Editar</a>
+  </div>
+</div>
+
+<div class="card" style="width: 22rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <a href="#" class="btn btn-primary">Eliminar</a>
+    <a href="#" class="btn btn-primary">Editar</a>
+  </div>
+</div>
+
+<%= simple_form_for @photo do |f| %>
+  <%= f.input :title %>
+  <%= f.input :picture %>
+
+  <%= f.button :submit %>
+<% end %>
